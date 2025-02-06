@@ -1,0 +1,107 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat();
+  justify-items: center; /* Centers items horizontally within each grid cell */
+  align-items: center; /* Centers items vertically within each grid cell */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} 
+
+header{
+  background-image: url("./logo.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between elements */
+  align-items: center;
+  position: relative;
+  padding: 1rem 0; 
+  
+}
+
+u
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+header .logo {
+  z-index: 2;
+}
+
+header nav {
+  z-index: 2;
+  margin-top: 1rem;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  cursor: pointer;
+  padding: 0 1rem;
+
+  font-size: 1.5rem;
+  transition: color 0.25s, border-bottom 0.25s;
+  position: relative;
+  margin: 0 100px ;
+}
+
+li a {
+  color: #ffffff;
+  text-decoration: none;
+  
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.25s, transform 0.25s;
+}
+
+li a:hover {
+  background-color: rgba(255, 204, 0, 0.7); /* Change background color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+li:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ffcc00; /* Underline color */
+  transition: width 0.25s;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+li:hover::after {
+  width: 100%;
+}
+
+.business-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap:10px;
+
+}

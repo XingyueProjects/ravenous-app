@@ -1,0 +1,183 @@
+.business-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Image on the left, info on the right */
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  border: 3px solid #f1c40f; /* Yellow border for contrast */
+  background-color: #ffffff; /* White background for contrast */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
+}
+
+.business-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px 0 0 10px; /* Rounded corners on the left side */
+}
+
+.business-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 1rem; /* Font size */
+  color: #4a4a4a; /* Darker text for better readability */
+}
+
+.business-name {
+  font-size: 1.6em; /* Larger font for the business name */
+  margin: 0 0 0.5rem; /* Space below */
+  color: #d35400; /* A warm color for the name */
+}
+
+.business-address {
+  margin: 0.5rem 0; /* Space above and below */
+  font-style: italic; /* Italics for the address */
+}
+
+.business-category {
+  margin: 0.5rem 0;
+  font-weight: bold; /* Bold for emphasis */
+  color: #8e44ad; /* A contrasting color for the category */
+}
+
+.business-rating-review {
+  display: flex;
+  justify-content: space-between; /* Space between rating and review count */
+  margin-top: auto; /* Pushes this section to the bottom */
+  width: 100%;
+}
+
+.business-rating {
+  color: #f39c12; /* Gold color for the rating */
+}
+
+.business-review {
+  text-align: right; /* Align review count to the right */
+  color: #7f8c8d; /* Lighter color for reviews */
+}
+
+.business-review::before {
+  content: "★"; /* Star character before the review count */
+  color: #f39c12; /* Gold color for the star */
+  margin-right: 0.25rem; /* Space between star and count */
+}
+
+.business-review-input {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem; /* Increased padding for a more spacious feel */
+  margin: 1rem 0; /* Vertical margin only for better spacing */
+  border: 1px solid #dcdcdc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #ffffff; /* White background for consistency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.business-review-input label {
+  font-size: 1.2rem; /* Consistent font size */
+  font-weight: bold; /* Bold text for emphasis */
+  margin-bottom: 0.5rem; /* Space below the label */
+  color: #d35400; /* Darker text color for readability */
+}
+
+.business-review-input input {
+  padding: 0.75rem; /* Increased padding for comfort */
+  margin-bottom: 1rem; /* Space below the input field */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem; /* Font size for consistency */
+  color: #d35400; /* Darker text color for readability */
+}
+
+.business-review-input textarea {
+  padding: 0.75rem; /* Increased padding for comfort */
+  margin-bottom: 1rem; /* Space below the textarea */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem; /* Font size for consistency */
+  color: #d35400; /* Darker text color for readability */
+}
+
+.business-review-input button {
+  padding: 0.6rem 1.2rem;  
+  background-color: #f1c40f;  
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+  font-size: 1rem; /* Consistent font size */
+}
+
+.business-review-input button:hover {
+  background-color: #c19b03; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.business-like {
+  padding: 0.5rem 1rem; /* Padding for the button */
+  background-color: #f39c12; /* Gold background for the like button */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+  font-size: 1rem; /* Consistent font size */
+  display: flex; /* Flex properties for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.business-like:hover {
+  background-color: #e67e22; /* Darker gold/orange on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.business-like:focus {
+  outline: none; /* Remove outline on focus */
+  box-shadow: 0 0 0 2px rgba(241, 196, 15, 0.5); /* Subtle shadow for focus */
+}
+
+.star {
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 2rem; /* Adjust size as needed */
+  color: #ccc; /* Default color for unfilled stars */
+  transition: color 0.2s; /* Smooth transition for color change */
+}
+
+.star.filled {
+  color: #f39c12; /* Color for filled stars */
+}
+
+/* Optional: Style the review input section */
+.business-review-input {
+  margin-top: 1rem; /* Space above the review input */
+}
+
+.business-review-input input {
+  width: 100%; /* Full width input */
+  padding: 0.5rem; /* Padding for comfort */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.business-review-input button {
+  padding: 0.5rem 1rem; /* Padding for the button */
+  background-color: #3498db; /* Button color */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  margin-left: 0.5rem; /* Space between input and button */
+}
+
+.business-review-input button:hover {
+  background-color: #2980b9; /* Darken on hover */
+}
